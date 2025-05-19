@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>계좌번호 복사</title>
+  <script>
+    function copyAndClose() {
+      const text = "카카오뱅크 3333-19-9026452";
+      navigator.clipboard.writeText(text).then(() => {
+        alert("계좌번호가 복사되었습니다!");
+        window.close();
+      }).catch(err => {
+        alert("복사에 실패했습니다. 다시 시도해주세요.");
+        console.error(err);
+      });
+    }
+  </script>
+</head>
+<body onload="copyAndClose()">
+  <p>계좌번호를 복사 중입니다...</p>
+</body>
+</html>
